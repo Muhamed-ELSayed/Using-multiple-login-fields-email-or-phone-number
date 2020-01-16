@@ -1,12 +1,26 @@
 from django.contrib import admin
-from .models import Users
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
+from .models import User
 # Register your models here.
+User = get_user_model()
 
 class UserAdmin(admin.ModelAdmin):
-  fields= ['fullname', 'phone_number', 'email', 'password', 'verfiy_pass']
-  list_display = ['fullname', 'phone_number', 'email',]
-  search_fields = ['fullname', 'phone_number', 'email',]
-  list_filter = ['fullname', 'phone_number', 'email',]
-  # list_editable = ['fullname', 'phone_number', 'email',]
-  # list_display_links= None
-admin.site.register(Users, UserAdmin)
+  class Meta:
+    model = User
+
+  list_display = ('email', 'fullname','phone', 'admin', 'last_login')
+  search_fields = ('email', 'phone', 'fullname')
+  list_filter = ['email', 'phone', 'fullname']
+  readonly_fields = ['password']
+  ordering = ['last_login']
+  fieldsets = (
+      ('Basic Info', {"fields": ('fullname', 'email', 'password'),}),
+      ("Personal Info",{"fields":('phone',)}),
+      ("Active",{"fields":('active',)}),
+      ("Staff",{"fields":('staff',)}),
+      ("Admin",{"fields":('admin',)}),
+  )
+
+admin.site.register(User, UserAdmin)
+admin.site.unregister(Group)
