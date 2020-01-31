@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Custom User</title>
+
+  <!--import css files -->
+  {% include 'includes/css.html' %}
+  <title>{% block title %}Welcome{% endblock title %}</title>
 </head>
 <body>
+  
   {% block content %}
   {% endblock content %}
+
+  <!--import js files-->
+  {% include 'includes/js.html' %}
 </body>
 </html>

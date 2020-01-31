@@ -39,13 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    
+    # My Apps
+    'users',
 
     #Utilities
     'phonenumber_field',
+    'materialize',
+    'crispy_forms',
+    'crispy_forms_materialize',
 
-    # My Apps
-    'users',
+    
 ]
 
 # change django auth to custom user
@@ -54,6 +57,11 @@ AUTHENTICATION_BACKENDS  = (
     'custom_admin.backends.backend.CustomauthanticationBackend',
     'django.contrib.auth.backends.ModelBackend'
 )
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = ('bootstrap', 'uni_form', 'bootstrap3', 'bootstrap4', 'materialize_css_forms', )
+CRISPY_TEMPLATE_PACK= 'materialize_css_forms'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

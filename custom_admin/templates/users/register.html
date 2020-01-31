@@ -1,11 +1,15 @@
-{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+<form method= 'post' data-url='{% url 'users:register' %}' class="register-form">
 
-{% block content %}
-<h1>Register</h1>
-    <form method='POST'> {% csrf_token %}
-      {{ form.as_p }}
-      <button type='submit' class='btn btn-default'>Submit</button>
-    </form>
-    <a href="{% url 'users:login' %}"><input type="button" value="login"></a>
+  <div class="modal-header">
+    <h4>Register</h4>
+  </div>
 
-{% endblock content %}
+  <div class="modal-body">
+    {% csrf_token %}
+    {%crispy form%}
+    <span class="form-error"></span>
+  </div>
+
+</form>

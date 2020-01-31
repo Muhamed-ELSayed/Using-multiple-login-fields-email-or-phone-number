@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h4>Using multiple login fields, email or phone number</h4>
+    </div>
+
+    {% if user.is_authenticated %}
+      <h5>Now you are login</h5>
+    {% endif %}
+
+    <!-- Create buttons-->
+    <div class="row main-nav">
+      <div class="col s12 m6 l6 lg6">
+        <button class='waves-effect waves-light btn modal-btn ajax-login'>Login</button>
+      </div>
+
+      <div class="col s12 m6 l6 lg6">
+        <button class='waves-effect waves-light btn modal-btn ajax-register'>Register</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Login Structure -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content modal-custom">
+      
+    </div>
+  </div>
+
+  <!--Modal Register Structure-->
+  <div id="modal-register" class="modal">
+    <div class="modal-content modal-custom">
+    
+    </div>
+  </div>
+
+{% endblock content %}

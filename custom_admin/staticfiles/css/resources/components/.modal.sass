@@ -1,0 +1,51 @@
+@import '.vars'
+
+.modal-body
+  text-align: center
+
+  .form-error
+    display: block
+    margin-top: 20px
+    color: red
+    font-weight: 400
+    letter-spacing: 2px
+
+  .custom-phone 
+    select
+      display: inline-block
+      width: 30%
+      font-size: 60%
+      font-weight: bold,
+      font-family: $EnFont
+      border: none
+      outline: none
+      background-color: #9e9e9e
+      color: $WhiteColor
+      border-radius: 0
+      float: left
+
+      option
+        font-size: 100%
+        font-family: $EnFont
+
+    input[type=text]
+      width: 70%
+      padding-left: 5%
+
+  .custom-input
+    .input-field
+      border: 1px solid #9e9e9e
+      margin: 0
+      overflow: hidden
+
+      input, input:focus
+        border-bottom: none!important
+        box-shadow: none!important
+        box-sizing: border-box
+        height: 3rem
+        float: right
+      
+      input
+        padding: 0 20px
+        margin: 0
+    

@@ -1,0 +1,52 @@
+@import '.vars'
+  
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  text-rendering: optimizeLegibility
+
+body,html
+  font-family: $EnFont
+  font-size: $EnFontSize
+  color: black  
+  background-color: #f8f8f8
+  height: 100vh
+  overflow: hidden
+  position: relative
+
+h4
+  margin: 0
+  @media #{$Exsmall-screen}
+    font-size: 90%
+    margin: 30px auto
+
+.container
+  text-align: center
+  height: 100%
+  position: relative
+
+.row .col
+  padding: 0
+
+.btn, .btn:link, .btn:active
+  text-decoration: none
+  color: $WhiteColor
+  background-color: $MainColor
+  text-align: center
+  letter-spacing: 1px
+  transition: all 0.3s ease-in-out
+  cursor: pointer
+  min-width: 50%
+  box-shadow: none
+  height: 60px
+  font-weight: 700
+
+  @media #{$Exsmall-screen}
+    margin-top: 30px
+
+.btn:hover, .btn:visited
+  background-color: $WhiteColor
+  color: $MainColor
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.145)
+
