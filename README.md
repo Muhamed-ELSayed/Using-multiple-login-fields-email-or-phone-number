@@ -1,6 +1,7 @@
 # Using multiple login fields, email or phone number
 
-[(https://repository-images.githubusercontent.com/233482656/159dcd80-44c9-11ea-8e3c-452c3ad4d653)]
+[![Snapshot](https://repository-images.githubusercontent.com/233482656/159dcd80-44c9-11ea-8e3c-452c3ad4d653)
+]
 
 How to Implement Multiple login fields via email or phone number
 
